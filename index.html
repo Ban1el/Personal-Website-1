@@ -896,6 +896,11 @@
           <!-- Disable Captcha -->
           <input type="hidden" name="_captcha" value="false" />
 
+          <input
+            type="hidden"
+            name="_next"
+            value="https://ban1el.github.io/Personal-Website-1/success.html"
+          />
           <!-- name -->
           <div class="row d-flex justify-content-center">
             <div class="col-lg-5">
@@ -907,6 +912,7 @@
                   id="floatingName"
                   placeholder="Name"
                   name="name"
+                  required
                 />
                 <label for="floatingName">Name</label>
               </div>
@@ -925,6 +931,7 @@
                   id="floatingEmail"
                   placeholder="Email"
                   name="email"
+                  required
                 />
                 <label for="floatingEmail">Email</label>
               </div>
@@ -942,7 +949,8 @@
                   id="floatingMessageText"
                   placeholder="Leave a message here!"
                   style="height: 300px"
-                  name="comments, questions"
+                  name="comments,&nbsp;questions"
+                  required
                 ></textarea>
                 <label for="floatingMessageText">Message</label>
               </div>
