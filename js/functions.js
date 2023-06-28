@@ -1,3 +1,6 @@
+//About
+//Shows the items upon clicking.
+
 function showContent(content_name) {
   //Education variables
   var educationDiv = document.getElementById("educationContent");
@@ -35,3 +38,19 @@ function showContent(content_name) {
     experienceDiv.style.display = "none";
   }
 }
+
+//Hamburger
+// Hides navbar items after clicking on a item.
+const navbarToggler = document.querySelector(".navbar-toggler");
+const mainNav = document.querySelector("#main-nav");
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (mainNav.classList.contains("show")) {
+      const collapse = new bootstrap.Collapse(mainNav);
+      collapse.hide();
+      navbarToggler.setAttribute("aria-expanded", "false");
+    }
+  });
+});
