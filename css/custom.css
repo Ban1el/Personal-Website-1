@@ -402,6 +402,12 @@ h1 {
   -ms-user-select: none;
 }
 
+@media (max-width: 767.98px) {
+  .gallery-btns ul li {
+    font-size: 11px;
+  }
+}
+
 #projects .img-wrapper {
   position: relative;
 }
