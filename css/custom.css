@@ -490,7 +490,7 @@ h1 {
 }
 
 #contact .form-control {
-  margin: 10px 10px;
+  margin: 10px 0;
 }
 
 .form-floating {
@@ -514,7 +514,7 @@ h1 {
 }
 
 .form-floating .form-control {
-  padding-left: 2.9rem;
+  padding-left: 3.5rem;
 }
 
 .icon-textarea {
