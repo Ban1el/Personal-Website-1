@@ -888,9 +888,14 @@
       <h6 class="text-primary text-center h1 fw-bold">Contact Me</h6>
       <div class="container">
         <form
-          action="https://formsubmit.co/danieltroyaromin1337@gmail.com"
+          action="https://formsubmit.co/375d522b8d27538f49b9f31f298905cb"
           method="POST"
         >
+          <!-- Honeypot -->
+          <input type="text" name="_honey" style="display: none" />
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false" />
+
           <!-- name -->
           <div class="row d-flex justify-content-center">
             <div class="col-lg-5">
@@ -901,6 +906,7 @@
                   class="form-control"
                   id="floatingName"
                   placeholder="Name"
+                  name="name"
                 />
                 <label for="floatingName">Name</label>
               </div>
@@ -918,6 +924,7 @@
                   class="form-control"
                   id="floatingEmail"
                   placeholder="Email"
+                  name="email"
                 />
                 <label for="floatingEmail">Email</label>
               </div>
@@ -935,6 +942,7 @@
                   id="floatingMessageText"
                   placeholder="Leave a message here!"
                   style="height: 300px"
+                  name="comments, questions"
                 ></textarea>
                 <label for="floatingMessageText">Message</label>
               </div>
