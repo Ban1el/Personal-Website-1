@@ -543,6 +543,17 @@ h1 {
   text-align: center;
 }
 
+.success-message .container {
+  overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .success-message .container {
+    overflow: hidden;
+    width: 400px;
+  }
+}
+
 .success-message ul li {
   list-style: none;
 }
