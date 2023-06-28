@@ -470,6 +470,13 @@ h1 {
   height: 260px;
 }
 
+@media (max-width: 767.98px) {
+  #services .card {
+    margin: 10px 10px;
+    height: auto;
+  }
+}
+
 /*---------- Contact section ----------*/
 
 #contact {
