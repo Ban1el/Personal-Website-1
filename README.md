@@ -1,3 +1,3 @@
-# personal_website_1
+# Personal Website
 
-First personal website developed with bootstrap.
+My very first personal website developed with bootstrap.
