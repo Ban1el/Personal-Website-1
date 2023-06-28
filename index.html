@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Aromin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/temp-logo.png" />
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top autohide">
+      <div class="container-fluid">
+        <a href="#intro" class="navbar-brand">
+          <span class="fw-bold text-light"
+            ><span class="highlight-text">D</span>aniel</span
+          >
+        </a>
+
+        <!-- toggle button for mobile nav -->
+        <!-- aria stuff is used for screen readers -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- navigation links-->
+        <div
+          class="collapse navbar-collapse justify-content-end align-center ul-bg"
+          id="main-nav"
+        >
+          <ul class="navbar-nav fw-bold ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+
+            <li class="nav-item nav-bar-icons">
+              <a href=""><i class="bi bi-facebook mx-1"></i></a>
+              <a href=""><i class="bi bi-linkedin mx-1"></i></a>
+              <a href=""><i class="bi bi-github mx-1"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main section -->
+    <section id="intro" class="pt-0">
+      <div class="container-lg">
+        <div class="row justify-content-center align-content-center">
+          <div
+            class="col-md-6 text-light text-center text-md-start d-flex align-items-center"
+          >
+            <div class="py-5">
+              <p
+                class="mb-2 intro-text fw-bold"
+                data-aos="fade-right"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+              >
+                Hello World! I'm&nbsp<span id="intro-name-text"
+                  >Daniel Aromin</span
+                >
+              </p>
+              <h1
+                class="fw-bold"
+                data-aos="fade-right"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                data-aos-delay="400"
+              >
+                and I'm a <span id="intro-position-text">Developer</span>
+              </h1>
+              <a
+                href="./assets/resume/Aromin, Daniel Troy - Resume.pdf"
+                download=""
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary mt-3 text-light fw-bold"
+                  data-aos="fade-right"
+                  data-aos-once="true"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-out"
+                  data-aos-delay="600"
+                >
+                  <i class="bi bi-download"></i> Download Resume
+                </button>
+              </a>
+              <p
+                class="mt-3"
+                data-aos="fade-right"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                data-aos-delay="600"
+              >
+                I am an aspiring developer who is passionate about coding and
+                continuously learning and exploring new technologies.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-md-5 d-none d-md-block pt-3"
+            data-aos="fade-left"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+          >
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <img src="./assets/images/hero.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of main section -->
+
+    <!-- about section-->
+    <section id="about">
+      <!-- about me -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-light my-3" data-aos="fade-right">
+            <h2 class="h1 text-primary fw-bold">About Me</h2>
+            <p>
+              As a soon-to-be graduate of Bachelor of Science in Information
+              Technology at STI College Fairview, I am someone who is passionate
+              about programming and has a strong desire to learn and improve
+              every day.
+            </p>
+          </div>
+
+          <!-- use button group -->
+
+          <div class="col-md-6" data-aos="fade-left">
+            <div
+              class="more-about-me shadow-lg border border-2 border-primary rounded-1"
+            >
+              <!-- buttons -->
+              <div class="about-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="educationButton"
+                  onclick="showContent('education')"
+                >
+                  Education
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="experienceButton"
+                  onclick="showContent('experience')"
+                >
+                  Experience
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="certificateButton"
+                  onclick="showContent('certificate')"
+                >
+                  Certificates
+                </button>
+              </div>
+              <!-- end of buttons -->
+
+              <!-- Collapsable item -->
+              <div
+                class="text-dark bg-light py-3 px-3 about-content border-top-0"
+              >
+                <div id="educationContent" style="display: block">
+                  <ul
+                    class="animate animate--extra-fast showContent--downToUp pt-1 about-ul"
+                  >
+                    <li>
+                      National College of Business and Arts Fairview |
+                      Highschool (2013 - 2017)
+                    </li>
+                    <li>
+                      STI College Fairview | Information and Communication
+                      Technology (2017 - 2019)
+                    </li>
+                    <li>
+                      STI College Fairview | Bachelor of Science inInformation
+                      Technology (2019- Present)
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="experienceContent" style="display: none">
+                  <p
+                    class="pt-1 animate animate--extra-fast showContent--downToUp"
+                  >
+                    Alarmnet, Inc. (Internship) | Cubao, Quezon City (02/27/2023
+                    - 06/02/23)
+                  </p>
+                  <ul
+                    class="animate animate--extra-fast showContent--downToUp about-ul"
+                  >
+                    <li>Technical Support</li>
+                    <li>Web Development</li>
+                    <li>System Administrator</li>
+                  </ul>
+                </div>
+
+                <div id="certificateContent" style="display: none">
+                  <ul
+                    class="animate animate--extra-fast showContent--downToUp pt-1 about-ul"
+                  >
+                    <li>
+                      SAP BUSINESS ONE - SAP BASIC (FINANCIALS AND LOGISTICS)
+                      (MARCH 2021)
+                    </li>
+                    <li>
+                      SAP BUSINESS ONE - SAP ADVANCE (FINANCIALS AND LOGISTICS)
+                      (MARCH 2022)
+                    </li>
+                    <li>
+                      PSI 45TH ENABLEMENT SEMINAR: TEACHING CODE QUALITY (2021)
+                    </li>
+                    <li>
+                      KAMAYALAN PARA SA KABATAAN: 2022 LOCAL AND NATIONAL
+                      ELECTIONS AND VOTING LITERACY WEBINAR (2022)
+                    </li>
+                    <li>
+                      APPLICATION DEVELOPMENT AND EMERGING TECHNOLOGY (2023)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End of Collapsable item -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of about me -->
+
+      <!-- Skills -->
+      <h3 class="text-primary text-center h1 fw-bold mt-5">Skills</h3>
+      <div class="skills-container mt-5 fw-bold" data-aos="flip-up">
+        <!------------ Row#1 ------------>
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/java.svg" alt="" />
+          <p>Java</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/c-sharp.svg" alt="" />
+          <p>C#</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/html.svg" alt="" />
+          <p>HTML5</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/css.svg" alt="" />
+          <p>CSS</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/javaScript.svg" alt="" />
+          <p>JavaScript</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/php.svg" alt="" />
+          <p>PHP</p>
+        </div>
+        <!-- skill card end -->
+
+        <!------------ Row#1 End ------------>
+
+        <!------------ Row#2 ------------>
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/sql.png" alt="" />
+          <p>SQL</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/bootstrap.svg" alt="" />
+          <p>Bootstrap</p>
+        </div>
+
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/wordpress.svg" alt="" />
+          <p>WordPress</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/unity.svg" alt="" />
+          <p>Unity</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/android-studio.svg" alt="" />
+          <p>Android Studio</p>
+        </div>
+        <!-- skill card end -->
+
+        <!-- skill card start -->
+        <div
+          class="skill bg-light border border-2 border-primary rounded animate animate floating"
+        >
+          <img src="./assets/images/skill-images/github.svg" alt="" />
+          <p>GitHub</p>
+        </div>
+        <!-- skill card end -->
+      </div>
+      <!-- End of Skills -->
+    </section>
+    <!-- end of about section  -->
+
+    <!-- projects section -->
+    <section id="projects">
+      <h4 class="text-primary text-center h1 fw-bold">Projects</h4>
+
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center gy-3">
+          <!-- card start -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+            <div
+              class="card border border-2 border-primary shadow-lg shadow-lg h-100"
+            >
+              <a
+                href="https://drive.google.com/drive/folders/1dFrehhIQ1BoGDTVCSoK3gdYfhPdu7k1u?usp=sharing"
+                target="_blank"
+              >
+                <div class="img-wrapper">
+                  <img
+                    src="./assets/images/project-images/smh.png"
+                    alt=""
+                    class="card-img-top embed-responsive-item"
+                  />
+                  <div class="overlay-img">
+                    <img src="./assets/images/gdrive-hover.svg" alt="" />
+                  </div>
+                </div>
+              </a>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">
+                  Sammy Hopper and the Mysteries of Hogmaths
+                </h5>
+                <p>
+                  A 2D educational math game developed for Grade 8 students of
+                  School of Our Lady of La Salette Inc. This is our thesis
+                  project and I am the programmer of the game.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+            <div
+              class="card border border-2 border-primary shadow-lg shadow-lg h-100"
+            >
+              <a href="https://erod.goldsgym.com.ph/" target="_blank">
+                <div class="img-wrapper">
+                  <img
+                    src="./assets/images/project-images/gge.png"
+                    alt=""
+                    class="card-img-top embed-responsive-item"
+                  />
+                  <div class="overlay-img">
+                    <img src="./assets/images/website-hover.svg" alt="" />
+                  </div>
+                </div>
+              </a>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Gold's Gym E.Rodriguez</h5>
+                <p>
+                  A website developed during my internship at Alarmnet, Inc.
+                  where I am tasked to create the website for Gold's Gym E.
+                  Rodriguez.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+            <div
+              class="card border border-2 border-primary shadow-lg shadow-lg h-100"
+            >
+              <a
+                href="https://drive.google.com/drive/folders/1dFrehhIQ1BoGDTVCSoK3gdYfhPdu7k1u?usp=sharing"
+                target="_blank"
+              >
+                <div class="img-wrapper">
+                  <img
+                    src="./assets/images/project-images/forsaken.png"
+                    alt=""
+                    class="card-img-top embed-responsive-item"
+                  />
+                  <div class="overlay-img">
+                    <img src="./assets/images/gdrive-hover.svg" alt="" />
+                  </div>
+                </div>
+              </a>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Forsaken</h5>
+                <p>
+                  Game created for our finals in IT Elective 4. A 2D action
+                  adventure game that takes place in scandinavia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card end -->
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="container pt-5">
+        <div class="row text-light gallery-btns">
+          <ul>
+            <li id="gallery-all" class="gallery-selected">All</li>
+            <li id="gallery-smh">SM&MH</li>
+            <li id="gallery-gg">GG E. Rodriguez</li>
+            <li id="gallery-forsaken">Forsaken</li>
+          </ul>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="gallery-modal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img
+                  class="modal-img img-fluid"
+                  src="./assets/images/project-images/smh/image (1).png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sammy Hopper -->
+
+        <div class="row">
+          <!------- Sammy Hopper ------->
+          <!--1-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image (1).png"
+                alt=""
+                class="img-fluid"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--2-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image (2).png"
+                alt=""
+                class="img-fluid"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--3-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image (3).png"
+                alt=""
+                class="img-fluid"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--4-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image (4).png"
+                alt=""
+                class="img-fluid"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--5-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image (5).png"
+                alt=""
+                class="img-fluid"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--6-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image (6).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--7-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image (7).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--8-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-smh animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/smh/image.png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!------- End of Sammy Hopper ------->
+
+          <!------- Forsaken ------->
+          <!--1-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image (1).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--2-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image (2).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--3-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image (3).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--4-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image (4).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--5-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image (5).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--6-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image (6).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--7-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image (7).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--8-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-forsaken animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/forsaken/image.png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!------- End of forsaken ------->
+
+          <!------- GG ------->
+          <!--1-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-gg animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/gge/image (1).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--2-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-gg animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/gge/image (2).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--3-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-gg animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/gge/image (3).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!--4-->
+          <div
+            class="col-6 col-lg-3 mt-4 category-gg animate animate--fast showContent--downToUp"
+          >
+            <div class="img-wrapper rounded-2">
+              <img
+                src="./assets/images/project-images/gge/image (4).png"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <i class="bi bi-zoom-in icon-gal gallery-item"></i>
+            </div>
+          </div>
+          <!------- end of GG ------->
+        </div>
+
+        <!-- end of Sammy Hopper -->
+      </div>
+
+      <!-- end of gallery -->
+    </section>
+    <!-- end of projects section -->
+
+    <!-- services section -->
+    <section id="services">
+      <h5 class="text-primary text-center h1 fw-bold">Services</h5>
+      <div class="container mt-5" data-aos="fade">
+        <div class="row d-flex justify-content-center">
+          <!-- Service start -->
+          <div class="col-lg-6">
+            <div
+              class="card border border-2 border-primary shadow-lg text-center py-2 floating-sm"
+              style="width: 100%"
+            >
+              <div class="card-body">
+                <i class="bi bi-browser-chrome" style="font-size: 50px"></i>
+                <h5 class="card-title fw-bold">Web Development</h5>
+                <p class="card-text">
+                  During my internship, I developed the landing page for Gold's
+                  Gym E. Rodriguez branch, gaining experience in web
+                  development. I utilized the Bootstrap framework and acquired
+                  knowledge in backend programming with PHP.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Service end -->
+
+          <!-- Service start -->
+          <div class="col-lg-6">
+            <div
+              class="card border border-2 border-primary shadow-lg text-center py-2 floating-sm"
+              style="width: 100%"
+            >
+              <div class="card-body">
+                <i class="bi bi-unity" style="font-size: 50px"></i>
+                <h5 class="card-title fw-bold">Game Development</h5>
+                <p class="card-text">
+                  I have experienced Game Development during my thesis project
+                  where we are tasked to develop the game utilizing C# and Unity
+                  Engine.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Service end -->
+
+          <!-- Service start -->
+          <div class="col-lg-6">
+            <div
+              class="card border border-2 border-primary shadow-lg text-center py-2 floating-sm"
+              style="width: 100%"
+            >
+              <div class="card-body">
+                <i class="bi bi-code-slash" style="font-size: 50px"></i>
+                <h5 class="card-title fw-bold">Programmer</h5>
+                <p class="card-text">
+                  I am passionate about programming, whether it's software
+                  development, web development, or game development. I have a
+                  strong interest in problem-solving and programming in general.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Service end -->
+        </div>
+      </div>
+    </section>
+    <!-- end of services section -->
+
+    <!-- contact section -->
+    <section id="contact">
+      <h6 class="text-primary text-center h1 fw-bold">Contact Me</h6>
+      <div class="container">
+        <form
+          action="https://formsubmit.co/danieltroyaromin1337@gmail.com"
+          method="POST"
+        >
+          <!-- name -->
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-5">
+              <div class="form-floating">
+                <i class="icon bi bi-person"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingName"
+                  placeholder="Name"
+                />
+                <label for="floatingName">Name</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- end of name -->
+          <!-- email -->
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-5">
+              <div class="form-floating">
+                <i class="icon bi bi-envelope"></i>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingEmail"
+                  placeholder="Email"
+                />
+                <label for="floatingEmail">Email</label>
+              </div>
+            </div>
+          </div>
+          <!-- end of email -->
+
+          <!-- message -->
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-5">
+              <div class="form-floating">
+                <i class="icon-textarea bi bi-chat-dots"></i>
+                <textarea
+                  class="form-control"
+                  id="floatingMessageText"
+                  placeholder="Leave a message here!"
+                  style="height: 300px"
+                ></textarea>
+                <label for="floatingMessageText">Message</label>
+              </div>
+            </div>
+          </div>
+          <!-- end of message -->
+
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-5">
+              <button
+                type="button"
+                class="btn btn-primary mt-2 ms-2 text-light fw-bold"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- end of contact section -->
+
+    <!-- go to top button -->
+    <a href="#" class="go-top-btn disable-gt-btn rounded"
+      ><i class="bi bi-caret-up-fill text-light"></i
+    ></a>
+    <!--end of go to top button-->
+
+    <!-- footer -->
+
+    <footer>
+      <div class="container py-3 mt-3">
+        <div class="row">
+          <div class="col-lg-12 mt-3">
+            <ul class="footer-icons">
+              <li class="mx-3 me-5 text-center text-primary">
+                <a href=""><i class="bi bi-facebook mx-1"></i></a>
+                <a href=""><i class="bi bi-linkedin mx-1"></i></a>
+                <a href=""><i class="bi bi-github mx-1"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 text-center text-light">
+            <p>&copy; 2023 | Daniel Troy D. Aromin</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- end of footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/autohide-nav.js"></script>
+    <script src="./js/go-to-top.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

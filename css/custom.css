@@ -1,0 +1,541 @@
+/* Animations */
+
+/* Utility classes */
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate.animate--infinite {
+  animation-iteration-count: infinite;
+}
+
+.animate.animate--delay-1s {
+  animation-delay: 1s;
+}
+
+.animate.animate--extra-fast {
+  animation-duration: 0.3s;
+}
+
+.animate.animate--fast {
+  animation-duration: 0.6s;
+}
+
+.animate.animate--slow {
+  animation-duration: 3;
+}
+
+/* Animations */
+@keyframes showContent--downToUp {
+  from {
+    opacity: 0%;
+    transform: translateY(10%);
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.showContent--downToUp {
+  animation-name: showContent--downToUp;
+  animation-timing-function: ease-in;
+}
+
+@keyframes showContent--appear {
+  from {
+    transform: scale(0);
+    opacity: 0%;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+
+.showContent--appear {
+  animation-name: showContent--appear;
+  animation-timing-function: ease-in;
+}
+
+.floating,
+.floating:hover,
+.floating-sm,
+.floating-sm:hover {
+  transition: 200ms ease-in-out;
+}
+
+.floating,
+.floating-sm {
+  transform: scale(1);
+}
+
+.floating:hover {
+  transform: scale(1.1);
+}
+
+.floating-sm:hover {
+  transform: scale(1.05);
+}
+
+/* End of Animations */
+
+/*
+Website Main color: #079bf5;
+*/
+
+/* scroll bar */
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #079bf5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #068fe4;
+}
+
+/* end of scroll bar */
+
+body {
+  /*
+  background-color: rgb(0, 0, 0);
+  */
+  padding: 0;
+  padding-top: 100px;
+  margin: 0;
+  height: 100%;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.font-regular {
+  font-weight: 200px;
+}
+
+.font-xt-bold {
+  font-weight: 900px;
+}
+
+/*---------- navigation bar ----------*/
+
+nav {
+  background-color: #000000;
+}
+
+.nav-link {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #079bf5;
+}
+
+.navbar-brand {
+  margin-left: 48px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.ul-bg {
+  background-color: #000000;
+}
+
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-size: 40px;
+}
+
+.highlight-text {
+  color: #079bf5;
+}
+
+.nav-bar-icons {
+  color: #079bf5;
+  margin-top: 7px;
+  margin-right: 48px;
+  padding-left: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .nav-bar-icons {
+    color: #079bf5;
+    padding-left: 0;
+    margin-left: 5px;
+  }
+
+  .navbar-brand {
+    margin-left: 0px;
+  }
+}
+
+.go-top-btn {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #079bf5;
+  bottom: 40px;
+  right: 50px;
+  cursor: pointer;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  font-size: 22px;
+}
+
+/* go to top button */
+
+.enable-gt-btn {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.disable-gt-btn {
+  transform: translateY(200%);
+  transition: all 0.3s ease-in-out;
+}
+
+/*---------- main section ----------*/
+
+#intro {
+  background-color: #000000;
+}
+
+#intro img {
+  max-width: 80%; /* Limit the maximum width of the image to its container */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+#intro p,
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+#intro .intro-text {
+  font-size: 20px;
+}
+
+#intro h1 {
+  font-size: 40px;
+}
+
+#intro-name-text {
+  color: #079bf5;
+}
+
+#intro-position-text {
+  color: #079bf5;
+}
+
+/*---------- about section ----------*/
+
+#about {
+  background-color: #0b0b0b;
+}
+
+.more-about-me {
+  border-radius: 0px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #079bf5;
+}
+
+.about-content {
+  min-height: 200px;
+}
+
+.about-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.about-btns button {
+  flex-grow: 1;
+  border-radius: 0;
+}
+
+.about-ul li {
+  margin: 10px 0px;
+}
+
+@media (max-width: 767.98px) {
+  /* Centers the text when viewed on smaller screens */
+  #about h2,
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/*---------- Skills ----------*/
+
+.skills-container {
+  display: flex;
+  padding: 0px 20%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  height: 130px;
+  margin: 10px 10px;
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 767.98px) {
+  /* Lessens the padding of the skill container to make room for other icons.*/
+  .skills-container {
+    padding: 0px 10%;
+  }
+}
+
+.skill img {
+  width: 80%;
+}
+
+/*---------- Projects section ----------*/
+
+#projects {
+  background-color: #000000;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.embed-responsive .card-img-top {
+  object-fit: cover;
+}
+
+.img-wrapper > .overlay-img {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.img-wrapper > .overlay-img > img {
+  max-width: 40%;
+  height: auto;
+}
+
+.img-wrapper > .overlay-img,
+.img-wrapper > .card-img-top {
+  transition: 200ms ease-in-out;
+}
+
+.img-wrapper > .overlay-img {
+  opacity: 0;
+}
+
+.img-wrapper:hover > .overlay-img {
+  opacity: 1;
+}
+
+.img-wrapper:hover > .card-img-top {
+  transform: scale(1.1);
+}
+
+/* gallery  */
+.gallery-btns a {
+  text-decoration: none;
+}
+
+.gallery-btns ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.gallery-btns ul li {
+  margin: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#projects .img-wrapper {
+  position: relative;
+}
+
+#projects .img-wrapper:hover > img,
+#projects .img-wrapper > img,
+.icon-gal {
+  transition: 200ms ease-in-out;
+}
+
+.icon-gal {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  font-size: 50px;
+  transition: 200ms ease-in-out;
+}
+
+.icon-gal:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#projects .img-wrapper:hover > img {
+  transform: scale(1.1);
+}
+
+/* underline hover */
+
+.gallery-btns ul li {
+  position: relative;
+}
+
+@keyframes slide-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.gallery-selected::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  background: #079bf5;
+  animation: slide-in 0.3s linear forwards;
+}
+
+/*---------- Services section ----------*/
+
+#services {
+  background-color: #0b0b0b;
+}
+
+#services .card {
+  margin: 10px 10px;
+  height: 260px;
+}
+
+/*---------- Contact section ----------*/
+
+#contact {
+  background-color: #000000;
+}
+
+#contact .form-control {
+  margin: 10px 10px;
+}
+
+.form-floating {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: calc(25%);
+  left: 1.6rem;
+  font-size: 20px;
+}
+
+.form-floating label,
+.form-floating .form-control {
+  left: 1.25rem;
+}
+
+.form-floating label {
+  margin-left: 1.5rem;
+}
+
+.form-floating .form-control {
+  padding-left: 2.9rem;
+}
+
+.icon-textarea {
+  position: absolute;
+  top: 0.9rem;
+  left: 1.6rem;
+  font-size: 20px;
+}
+
+/*---------- footer ----------*/
+
+footer {
+  background-color: #0b0b0b;
+}
+
+.footer-icons {
+  list-style: none;
+  font-size: 30px;
+}
+
+/*---------- Media queries Placeholders (Ignore) ----------*/
+
+@media (max-width: 767.98px) {
+  /* CSS rules for phones */
+}
+
+@media (min-width: 768px) {
+  /* CSS rules for tablets */
+}
+
+@media (min-width: 992px) {
+  /* CSS rules for small laptops */
+}
+
+@media (min-width: 1200px) {
+  /* CSS rules for laptops and desktops */
+}
